@@ -1,0 +1,7 @@
+{
+  "product1" : "Blackberry",
+  "price1" : "50000",
+  "product2" : "iphone X",
+  "price2" : "50000",
+  "products" : ["Blackberry", "iphone X", "Samsung Note 8", "Nokia Edge"]
+}
