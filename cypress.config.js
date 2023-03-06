@@ -20,7 +20,7 @@ module.exports = defineConfig({
     url: 'https://rahulshettyacademy.com/seleniumPractise/',
     
     // Run all TCs from below path
-    specPattern: 'cypress/integration/*/*.js',
+    specPattern: 'cypress/integration/examples/*.js',
 
     // Set error screenshot flag
     screenshotOnRunFailure: true,
@@ -38,6 +38,5 @@ module.exports = defineConfig({
 
       // implement node event listeners here
     },
-
   },
 });

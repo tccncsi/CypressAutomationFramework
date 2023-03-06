@@ -142,9 +142,12 @@ describe('Test Suite: Cypress Baseline Framework', () => {
 
             // add assertion to check actual text and expected text
             expect(actualText.includes('Success!')).to.be.true
-        })
+        })  
+    })
 
-
+    it('This is Failed Testcase example', ()=>{
+        console.log('Failed testcase example for dashboard.')
+        assert.equal(true, false, "Failed Testcase");
     })
 
 
