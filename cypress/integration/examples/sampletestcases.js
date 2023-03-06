@@ -141,7 +141,7 @@ describe('Test Suite: Cypress Baseline Framework', () => {
             const actualText = element.text()
 
             // add assertion to check actual text and expected text
-            expect(actualText.includes('Success!')).to.be.true
+            expect(actualText.includes('Successss!')).to.be.true
         })  
     })
 
