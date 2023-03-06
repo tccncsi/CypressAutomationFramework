@@ -15,6 +15,12 @@ module.exports = defineConfig({
     url : "https://rahulshettyacademy.com/angularpractice/"
   },
 
+  // set rerun flag to run failure test cases
+  retries:{
+    // below counter will run Failed case N times
+    runMode: 1
+  },
+
   // set end to end configurations
   e2e: {
     url: 'https://rahulshettyacademy.com/seleniumPractise/',
