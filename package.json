@@ -6,12 +6,12 @@
   "scripts": {
     "start": "my-server -p 3030 --https",
     "cy:run": "cypress run",
-    "test": "npm cypress run",
+    "test": "node_modules\\.bin\\cypress run",
     "chromeTest": "npm test -- --browser chrome",
     "edgeTest": "nom test -- --browser edge",
     "recordDashboardTest": "npm test -- --record --key 903c3273-554f-4f77-a6d9-fe80586694c4"
   },
-  
+
   "author": "SHIVAJI DHUMAL - P1334185",
   "license": "ISC",
   "devDependencies": {
