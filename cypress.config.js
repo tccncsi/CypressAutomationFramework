@@ -9,7 +9,7 @@ module.exports = defineConfig({
   defaultCommandTimeout: 6000,
   pageLoadTimeout: 30000,
   
-  reporter: "mochawesome",
+  //reporter: "mochawesome",
 
   projectId: 'adjojy',
 
@@ -24,6 +24,7 @@ module.exports = defineConfig({
     runMode: 1
   },
 
+  /*
   "reporter": "cypress-mochawesome-reporter",
   "reporterOptions": {
     "reportDir": "cypress/reports",
@@ -39,8 +40,7 @@ module.exports = defineConfig({
         "html": false,
         "json": true
     },
-
-
+*/
 
   // set end to end configurations
   e2e: {

@@ -1,0 +1,218 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-03-09T12:27:34.093Z",
+    "end": "2023-03-09T12:27:51.029Z",
+    "duration": 16936,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "08992fba-fbc8-419a-8025-67834c1b8bb2",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\sampletestcases.js",
+      "file": "cypress\\integration\\examples\\sampletestcases.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "78f3e933-d140-48b2-9961-43dbd9db8763",
+          "title": "Test Suite: Cypress Baseline Framework 2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fill the form using hard coded data",
+              "fullTitle": "Test Suite: Cypress Baseline Framework 2 Fill the form using hard coded data",
+              "timedOut": null,
+              "duration": 2056,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(1) > .form-control').type('Shivaji Dhumal');\ncy.get(':nth-child(2) > .form-control').type('shivaji.dhumal@mail.com');\ncy.get('#exampleInputPassword1').type('Qwerty@123');\ncy.get('#exampleCheck1').click();\ncy.get('#exampleFormControlSelect1').select('Male');\ncy.get('#inlineRadio2').click();\ncy.get(':nth-child(8) > .form-control').type('1989-01-12');",
+              "err": {},
+              "uuid": "9fb5ab5b-927d-43aa-b9a6-c84adf5e1ff8",
+              "parentUUID": "78f3e933-d140-48b2-9961-43dbd9db8763",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fill the form using test data from Json file",
+              "fullTitle": "Test Suite: Cypress Baseline Framework 2 Fill the form using test data from Json file",
+              "timedOut": null,
+              "duration": 1772,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// create object of a page class and access the locator methods\nconst homepage = new _homePage.default();\n// below are the methods which retun the locators\nhomepage.getPersonName().type(personDetails.name);\nhomepage.getEmailId().type(personDetails.email);\nhomepage.getPassword().type(personDetails.password);\nhomepage.getCheckbox().click();\nhomepage.getGender().select(personDetails.gender);\nhomepage.getRadiobutton().click();\nhomepage.getDateOfBirth().type(personDetails.dateOfBirth);",
+              "err": {},
+              "uuid": "00b73eb6-4fae-4c24-9b48-1e20a4443db6",
+              "parentUUID": "78f3e933-d140-48b2-9961-43dbd9db8763",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate text box value",
+              "fullTitle": "Test Suite: Cypress Baseline Framework 2 Validate text box value",
+              "timedOut": null,
+              "duration": 2519,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Validate text box value\ncy.get(':nth-child(1) > .form-control').type(personDetails.name);\ncy.wait(2000);\ncy.get(':nth-child(4) > .ng-untouched').should('have.value', personDetails.name);\n// Validate element attribute value \ncy.get(':nth-child(1) > .form-control').should('have.attr', 'minlength', '2');\n// Validate checkbox is disabled\ncy.get('#inlineRadio3').should('be.disabled');\ncy.get('#inlineRadio3').should('be.visible');",
+              "err": {},
+              "uuid": "e58af584-df54-4400-81a3-fc2cb4c412e7",
+              "parentUUID": "78f3e933-d140-48b2-9961-43dbd9db8763",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mobile shopping using JSON data",
+              "fullTitle": "Test Suite: Cypress Baseline Framework 2 Mobile shopping using JSON data",
+              "timedOut": null,
+              "duration": 1503,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// click on Shop menu\ncy.get(':nth-child(2) > .nav-link').click();\n// check for respective mobile model and add to cart\ncy.get('.card-title > a').each(($ele, $index, $list) => {\n  if ($ele.text().includes(mobileDetails.product1)) {\n    cy.get('.card-footer > .btn').eq($index).click();\n  }\n});\n// click on Checkout button\ncy.get('#navbarResponsive > .navbar-nav > .nav-item > .nav-link').click();\ncy.get('h4.media-heading > a').should('have.text', mobileDetails.product1);",
+              "err": {},
+              "uuid": "1326dc16-ac60-48e1-a922-bbb4bc055478",
+              "parentUUID": "78f3e933-d140-48b2-9961-43dbd9db8763",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mobile shopping using parameterized method",
+              "fullTitle": "Test Suite: Cypress Baseline Framework 2 Mobile shopping using parameterized method",
+              "timedOut": null,
+              "duration": 508,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// click on Shop menu\ncy.get(':nth-child(2) > .nav-link').click();\n// created method to select productName and add to cart\ncy.selectProduct(mobileDetails.product1);\ncy.selectProduct(mobileDetails.product2);",
+              "err": {},
+              "uuid": "49c3ed48-92af-49bb-8300-77a157609d1c",
+              "parentUUID": "78f3e933-d140-48b2-9961-43dbd9db8763",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "parameterized Test case sample 1",
+              "fullTitle": "Test Suite: Cypress Baseline Framework 2 parameterized Test case sample 1",
+              "timedOut": null,
+              "duration": 6295,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// define timeout at test case level\nCypress.config('defaultCommandTimeout', 8000);\n// click on Shop menu\ncy.get(':nth-child(2) > .nav-link').click();\n// reading JSON array and passed to the function\nmobileDetails.products.forEach(element => {\n  cy.selectProduct(element);\n});\n// click on Checkout button\nconst homepage = new _homePage.default();\nhomepage.getCheckOut().click();\ncy.get(':nth-child(6) > :nth-child(5) > .btn').click();\ncy.get('#country').type('India');\ncy.get('.suggestions > ul > li > a').should('be.visible').click();\n// To click on the element which are overlapped by another element use {force:true} while click\ncy.get('#checkbox2').click({\n  force: true\n});\ncy.get('.ng-pristine > .btn').click();\n// below line will give error due to some extra text in the actual message.\n// cy.get('.alert').should('have.text','Success! Thank you! Your order will be delivered in next few weeks :-).')\ncy.get('.alert').then(function (element) {\n  const actualText = element.text();\n  // add assertion to check actual text and expected text\n  expect(actualText.includes('Success!')).to.be.true;\n});",
+              "err": {},
+              "uuid": "607ee801-9c04-402c-afe9-8f96334aef52",
+              "parentUUID": "78f3e933-d140-48b2-9961-43dbd9db8763",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "This is Failed Testcase example",
+              "fullTitle": "Test Suite: Cypress Baseline Framework 2 This is Failed Testcase example",
+              "timedOut": null,
+              "duration": 517,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('Failed testcase example for dashboard.');\nassert.equal(true, true, \"Assertions Testcase\");",
+              "err": {},
+              "uuid": "162610b3-729b-4452-ac73-8c89edb70486",
+              "parentUUID": "78f3e933-d140-48b2-9961-43dbd9db8763",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9fb5ab5b-927d-43aa-b9a6-c84adf5e1ff8",
+            "00b73eb6-4fae-4c24-9b48-1e20a4443db6",
+            "e58af584-df54-4400-81a3-fc2cb4c412e7",
+            "1326dc16-ac60-48e1-a922-bbb4bc055478",
+            "49c3ed48-92af-49bb-8300-77a157609d1c",
+            "607ee801-9c04-402c-afe9-8f96334aef52",
+            "162610b3-729b-4452-ac73-8c89edb70486"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15170,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
