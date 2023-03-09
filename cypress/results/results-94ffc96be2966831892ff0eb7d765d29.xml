@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="27.931" tests="11" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-03-09T08:44:21" tests="0" file="cypress\integration\examples\testcase.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Suite: Cypress Baseline Framework 1" timestamp="2023-03-09T08:44:21" tests="11" time="27.917" failures="0">
+    <testcase name="Test Suite: Cypress Baseline Framework 1 This is a sample test case 1" time="1.594" classname="This is a sample test case 1">
+    </testcase>
+    <testcase name="Test Suite: Cypress Baseline Framework 1 This is a sample test case 2" time="0.284" classname="This is a sample test case 2">
+    </testcase>
+    <testcase name="Test Suite: Cypress Baseline Framework 1 This is a sample test case 3" time="0.140" classname="This is a sample test case 3">
+    </testcase>
+    <testcase name="Test Suite: Cypress Baseline Framework 1 This is a sample test case 4" time="0.897" classname="This is a sample test case 4">
+    </testcase>
+    <testcase name="Test Suite: Cypress Baseline Framework 1 Validate product count" time="2.427" classname="Validate product count">
+    </testcase>
+    <testcase name="Test Suite: Cypress Baseline Framework 1 Validate product count" time="2.538" classname="Validate product count">
+    </testcase>
+    <testcase name="Test Suite: Cypress Baseline Framework 1 Click on Add to Cart" time="3.030" classname="Click on Add to Cart">
+    </testcase>
+    <testcase name="Test Suite: Cypress Baseline Framework 1 Add product to Cart" time="2.665" classname="Add product to Cart">
+    </testcase>
+    <testcase name="Test Suite: Cypress Baseline Framework 1 Use of then keyword" time="0.276" classname="Use of then keyword">
+    </testcase>
+    <testcase name="Test Suite: Cypress Baseline Framework 1 Cypress alias" time="9.878" classname="Cypress alias">
+    </testcase>
+    <testcase name="Test Suite: Cypress Baseline Framework 1 Handle validations" time="2.953" classname="Handle validations">
+    </testcase>
+  </testsuite>
+</testsuites>

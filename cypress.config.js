@@ -6,7 +6,7 @@ module.exports = defineConfig({
   defaultCommandTimeout: 6000,
   pageLoadTimeout: 30000,
   
-  //reporter: "mochawesome",
+  reporter: "mochawesome",
 
   projectId: 'adjojy',
 
@@ -19,6 +19,15 @@ module.exports = defineConfig({
   retries:{
     // below counter will run Failed case N times
     runMode: 1
+  },
+
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "charts": true,
+    "reportPageTitle": "Test Suite Report",
+    "embeddedScreenshots": true,
+    "inlineAssets": true
   },
 
   // set end to end configurations

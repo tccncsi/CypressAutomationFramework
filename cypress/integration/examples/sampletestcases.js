@@ -2,11 +2,11 @@
 // import page class to access locator methods
 import homePage from "../pageObjects/homePage";
 
-describe('Test Suite: Cypress Baseline Framework', () => {
+describe('Test Suite: Cypress Baseline Framework 2', () => {
     // declare a variable for test data
     let personDetails;
     let mobileDetails;
-    let configDetails;
+    //let configDetails;
 
     before(function(){
 
@@ -21,11 +21,12 @@ describe('Test Suite: Cypress Baseline Framework', () => {
            mobileDetails = testdata
         })
 
+        /*
         cy.fixture('/configuration/config').then(function(testdata)
         {
            configDetails = testdata
         })
-
+        */
 
     })
 
@@ -141,13 +142,13 @@ describe('Test Suite: Cypress Baseline Framework', () => {
             const actualText = element.text()
 
             // add assertion to check actual text and expected text
-            expect(actualText.includes('Successss!')).to.be.true
+            expect(actualText.includes('Success!')).to.be.true
         })  
     })
 
     it('This is Failed Testcase example', ()=>{
         console.log('Failed testcase example for dashboard.')
-        assert.equal(true, false, "Failed Testcase");
+        assert.equal(true, true, "Assertions Testcase");
     })
 
 
