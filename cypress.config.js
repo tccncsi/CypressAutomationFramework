@@ -1,5 +1,8 @@
 const { defineConfig } = require("cypress");
 
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+// import allureWriter from "@shelex/cypress-allure-plugin/writer";
+
 module.exports = defineConfig({
 
   // define global configurations
@@ -30,8 +33,18 @@ module.exports = defineConfig({
     "inlineAssets": true
   },
 
+  "reporter": "../node_modules/mochawesome/src/mochawesome.js",
+    "reporterOptions": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+    },
+
+
+
   // set end to end configurations
   e2e: {
+    
     url: 'https://rahulshettyacademy.com/seleniumPractise/',
     
     // Run all TCs from below path
