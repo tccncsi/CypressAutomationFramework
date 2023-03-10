@@ -10,15 +10,23 @@
     "onlyreport": "npm test -- --browser chrome --reporter mocha-multi-reporters --reporter-options configFile=cypress\\configuration\\reporter-config.json",
     "recordDashboardTest": "npm test -- --record --key 903c3273-554f-4f77-a6d9-fe80586694c4",
     "report": "cypress run --record --key 903c3273-554f-4f77-a6d9-fe80586694c4 --reporter mocha-multi-reporters --reporter-options configFile=cypress\\configuration\\reporter-config.json",
-    "delete:reportFolder": "del -f mochawesome-report/",
-    "test:cli": "npm run delete:reportFolder && cypress run",
+    
+    
+    "delete:reportFolder": "del -f mochawesome-report\\",
+    "test:cli": "npm run delete:reportFolder && cypress run --browser chrome --record --key 903c3273-554f-4f77-a6d9-fe80586694c4",
+    "merge:reports": "mochawesome-merge mochawesome-report\\*.json > cypress-combined-report.json",
+    "create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json",
+    "createhtmlreport": "npm run test:cli && npm run create:html:report",
+
+
     "cy:run": "cypress run allure=true",
-    "clean:folders": "rm -R -f allure-report/* && rm -R -f allure-results/*",
-    "allure:report": "cypress run allure generate allure-results — clean -o allure-report && allure open allure-report",
+    "clean:folders": "rm -R -f allure-report\\* && rm -R -f allure-results\\*",
+    "allure:report": "cypress run allure generate allure-results -clean -o allure-report && allure open allure-report",
     "beforetest": "npm run clean:folders",
-    "tests": "npm run cy:run || npm run aftertest",
-    "aftertest": "npm run allure:report"
+    "aftertest": "npm run allure:report",
+    "tests": "npm run cy:run || npm run aftertest"
   },
+
   "author": "SHIVAJI DHUMAL - P1334185",
   "license": "ISC",
   "devDependencies": {

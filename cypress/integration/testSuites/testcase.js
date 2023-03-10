@@ -1,6 +1,6 @@
 // Cypress test class file -> Spec file
 
-describe('Test Suite: Cypress Baseline Framework 1', () => {
+describe('Test Suite: 2', () => {
 
   before('Setup Environment',()=>
   {

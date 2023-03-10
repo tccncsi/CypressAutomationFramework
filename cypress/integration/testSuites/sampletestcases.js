@@ -2,7 +2,7 @@
 // import page class to access locator methods
 import homePage from "../pageObjects/homePage";
 
-describe('Test Suite: Cypress Baseline Framework 2', () => {
+describe('Test Suite: 1', () => {
     // declare a variable for test data
     let personDetails;
     let mobileDetails;

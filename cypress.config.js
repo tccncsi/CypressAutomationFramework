@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 const allureWriter = require('@shelex/cypress-allure-plugin/writer');
-// import allureWriter from "@shelex/cypress-allure-plugin/writer";
+//import allureWriter from "@shelex/cypress-allure-plugin/writer";
 
 module.exports = defineConfig({
 
@@ -33,22 +33,26 @@ module.exports = defineConfig({
     "embeddedScreenshots": true,
     "inlineAssets": true
   },
-
+*/
   "reporter": "../node_modules/mochawesome/src/mochawesome.js",
     "reporterOptions": {
         "overwrite": false,
         "html": false,
         "json": true
     },
-*/
 
   // set end to end configurations
   e2e: {
     
     url: 'https://rahulshettyacademy.com/seleniumPractise/',
-    
+
+    setupNodeEvents(on, config) {
+    allureWriter(on, config);
+    return config;
+    },
+
     // Run all TCs from below path
-    specPattern: 'cypress/integration/examples/*.js',
+    specPattern: 'cypress/integration/testSuites/*.js',
 
     // Set error screenshot flag
     screenshotOnRunFailure: true,
